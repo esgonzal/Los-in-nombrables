@@ -1,0 +1,10 @@
+<div class="card">
+    <img src="{{photo.imgUrl}}" class="img-fluid" alt="responsive image">
+    <div class="col-12 text-center" *ngIf="getUrl().includes('photo') == false">
+        <button type="button" class="btn btn-secondary btn-sm" [routerLink]="['/photo', photo._id]">Ver detalles</button>
+    </div>
+    <div class="col-12 text-center" *ngIf="getUrl().includes('photo')">
+        <p>Titulo: {{photo.title}}</p>
+        <p>Autor de la foto: {{photo.author}}</p> Descripción: {{photo.description}}
+    </div>
+</div>
